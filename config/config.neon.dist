@@ -10,9 +10,4 @@ parameters:
         calendar:
             id: rezervace.toyopneu@gmail.com
     security:
-        allowedOrigins:
-            - toyopneu.cz
-            - www.toyopneu.cz
-            - localhost
-            - '::1'
-            - 127.0.0.1
+        client_secret: 08afd6f9ae0c6017d105b4ce580de885

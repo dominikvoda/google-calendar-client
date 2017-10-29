@@ -8,8 +8,6 @@ use Slim\Http\Response;
 
 class Authorization implements MiddlewareInterface
 {
-    const CLIENT_SECRET = '08afd6f9ae0c6017d105b4ce580de885';
-
     /**
      * @var Container
      */
@@ -34,7 +32,9 @@ class Authorization implements MiddlewareInterface
      */
     public function __invoke(Request $request, Response $response, callable $next)
     {
-        if ($request->getParsedBodyParam('client_secret') === self::CLIENT_SECRET) {
+        $config = $this->container->get('config');
+        $clientSecret = $config['security']['clientSecret'];
+        if ($request->getParsedBodyParam('client_secret') === $clientSecret) {
             return $next($request, $response);
         }
 
