@@ -1,0 +1,18 @@
+parameters:
+    slim:
+        container:
+            settings:
+                displayErrorDetails: true
+    google:
+        client:
+            applicationName: RezervaceToyopneu
+            keyFile: config/auth.json
+        calendar:
+            id: rezervace.toyopneu@gmail.com
+    security:
+        allowedOrigins:
+            - toyopneu.cz
+            - www.toyopneu.cz
+            - localhost
+            - '::1'
+            - 127.0.0.1
