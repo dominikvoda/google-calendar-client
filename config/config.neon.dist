@@ -10,4 +10,4 @@ parameters:
         calendar:
             id: rezervace.toyopneu@gmail.com
     security:
-        client_secret: 08afd6f9ae0c6017d105b4ce580de885
+        client_secret: somesecretkey
